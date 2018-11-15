@@ -1,0 +1,28 @@
+{
+  "bin": {
+    "prayer-cli": "index.js"
+  },
+  "name": "prayer-cli",
+  "version": "1.0.0",
+  "description": "prayer 脚手架CLI 工具",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yqcscaff/prayer-cli.git"
+  },
+  "author": "yanqing.chen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yqcscaff/prayer-cli/issues"
+  },
+  "homepage": "https://github.com/yqcscaff/prayer-cli#readme",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "cross-spawn": "^6.0.5",
+    "path-exists": "^3.0.0",
+    "shelljs": "^0.8.3"
+  }
+}

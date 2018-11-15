@@ -1,0 +1,11 @@
+*.zip
+*.rar
+*.log
+.svn
+.DS_Store
+.com.apple.timemachine.supported
+.idea/
+node_modules
+/build
+dist
+lib

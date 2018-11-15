@@ -1,0 +1,39 @@
+@import '~normalize.css';
+
+:global {
+  .slider {
+    width: 200px;
+    flex: 0 0 200px;
+    max-width: 200px;
+    min-width: 200px;
+  }
+  .prayer-layout-sider {
+    box-shadow: 2px 0 6px rgba(0, 21, 41, 0.35);
+    background: #001529;
+  }
+  .prayer-pro-components-sider {
+    min-height: 100vh;
+    position: relative;
+    z-index: 10;
+  }
+  .prayer-slider-ul-menu {
+    padding: 0;
+  }
+  .prayer-slider-ul-menu > li > a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    padding-left: 48px;
+    box-sizing: border-box;
+  }
+  .prayer-menu-item {
+    cursor: pointer;
+    width: 100%;
+    line-height: 40px;
+    height: 40px;
+  }
+  .prayer-menu-item.active {
+    background-color: #1890ff;
+  }
+}
