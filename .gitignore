@@ -6,6 +6,7 @@
 .com.apple.timemachine.supported
 .idea/
 node_modules
+template
 /build
 dist
 lib
