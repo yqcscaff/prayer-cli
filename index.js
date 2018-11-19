@@ -10,6 +10,7 @@ const rimraf = require('rimraf')
 const log = console.log;
 
 const copyRecursiveSync = (src, dest) => {
+  log(chalk.dim(`${src}->${dest}`));
   const stats = fs.statSync(src)
   const isDirectory = stats.isDirectory()
 
@@ -28,14 +29,12 @@ const start = () => {
   const projectName = option[0]
   
   const dist = path.join(baseDir, projectName)
-  log(chalk.bold.cyan('directory building...'))
   copyRecursiveSync(path.join(__dirname, 'template'), dist)
-
+  log(chalk.bold.cyan('\n Project directory creation completed! \n'))
   process.on('uncaughtException', (err) => {
     return log(chalk.bold.bgRed(`Error: ${err}`))
   });
-  log(chalk.bold.green('directory build completed!'))
-  log(chalk.bold.cyan('yarn add packages...'))
+  log(chalk.bold.white('\n yarn add packages... this may take some time. \n'))
 
   spawn('yarn', {
     stdio: 'inherit',
@@ -47,7 +46,7 @@ const start = () => {
       log(chalk.bold.bgRed(err))
       return;
     }
-    log(chalk.bold.green('all doing!'))
+    log(chalk.bold.cyan('\n all done!\n\n'))
   })
 }
 
@@ -65,15 +64,13 @@ const run = () => {
     return log(chalk.bold.bgRed('Error: Node version should be more than v6.x.'))
 
   return new Promise(resolve => {
-    rimraf(path.resolve(__dirname, 'template'), () => {
+    rimraf(path.join(__dirname, 'template'), () => {
       const cmd = 'git clone https://github.com/yqcscaff/prayer-pro.git template'
-      log(chalk.bold.cyan('downloading' + '...'))
       exec(cmd, { cwd: path.resolve(__dirname) }, err => {
         if (err) {
           log(chalk.bold.bgRed(err))
           return;
         }
-        log(chalk.bold.green('download success!'))
         resolve();
       });
     })
