@@ -10,3 +10,4 @@ template
 /build
 dist
 lib
+package-lock.json

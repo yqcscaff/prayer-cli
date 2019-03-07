@@ -1,9 +1,9 @@
 {
   "bin": {
-    "prayer-cli": "index.js"
+    "prayer-cli create app": "index.js"
   },
   "name": "prayer-cli",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "prayer 脚手架CLI 工具",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,7 @@
     "url": "git+https://github.com/yqcscaff/prayer-cli.git"
   },
   "author": "yanqing.chen",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/yqcscaff/prayer-cli/issues"
   },
